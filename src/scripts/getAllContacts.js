@@ -1,11 +1,14 @@
-import fs from 'node:fs/promises';
-import { PATH_DB } from '../constans/contacts.js';
+import { PATH_DB } from '../constans/contacts';
+import fs from 'fs/promises';
 
-(async () => {
+async function getAllContacts() {
   try {
-    const data = await fs.readFile(PATH_DB, { encoding: 'utf8' });
-    console.log({ data });
+    const data = await fs.readFile(PATH_DB, 'utf8');
+    const contacts = JSON.parse(data);
+    console.log(contacts);
   } catch (err) {
-    console.error('Помилка додавання даних до файлу:', err);
+    console.error('Error getting all contacts:', err);
   }
-})();
+}
+
+getAllContacts();

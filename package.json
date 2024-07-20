@@ -9,6 +9,11 @@
     "start": "node ./src/index.js",
     "dev": "nodemon src/index.js",
     "get-all": "node src/scripts/getAllContacts.js",
+    "generate": "node src/scripts/generateContacts.js",
+    "remove-all": "node src/scripts/removeAllContacts.js",
+    "add-one": "node src/scripts/addOneContact.js",
+    "remove-one": "node src/scripts/removeOneContact.js",
+    "count": "node src/scripts/countContacts.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,8 +21,13 @@
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^9.7.0",
+    "@faker-js/faker": "^8.4.1",
     "eslint": "^9.7.0",
     "globals": "^15.8.0",
     "nodemon": "^3.1.4"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "url": "^0.11.3"
   }
 }
