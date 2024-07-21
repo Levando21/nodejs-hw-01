@@ -12,7 +12,7 @@
     "generate": "node src/scripts/generateContacts.js",
     "remove-all": "node src/scripts/removeAllContacts.js",
     "add-one": "node src/scripts/addOneContact.js",
-    "remove-one": "node src/scripts/removeOneContact.js",
+    "remove-last": "node src/scripts/removeLastContact.js",
     "count": "node src/scripts/countContacts.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -10,7 +10,9 @@ async function removeOneContact() {
 
     if (data.length > 0) {
       data.pop();
+      await fs.writeFile(PATH_DB, JSON.stringify(contacts, null, 2));
     } else {
+      console.log(contacts);
       console.log('No contacts to remove.');
       return;
     }

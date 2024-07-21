@@ -1,4 +1,4 @@
-import { PATH_DB } from '../constans/contacts';
+import { PATH_DB } from '../constans/contacts.js';
 import fs from 'fs/promises';
 
 async function getAllContacts() {
