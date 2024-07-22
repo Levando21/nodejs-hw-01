@@ -2,7 +2,7 @@ import { PATH_DB } from '../constans/contacts.js';
 
 import fs from 'fs/promises';
 
-async function removeOneContact() {
+async function removeLastContact() {
   try {
     const contacts = await fs.readFile(PATH_DB, 'utf-8');
 
@@ -10,7 +10,7 @@ async function removeOneContact() {
 
     if (data.length > 0) {
       data.pop();
-      await fs.writeFile(PATH_DB, JSON.stringify(contacts, null, 2));
+      await fs.writeFile(PATH_DB, JSON.stringify(data, null, 2));
     } else {
       console.log(contacts);
       console.log('No contacts to remove.');
@@ -21,4 +21,4 @@ async function removeOneContact() {
   }
 }
 
-removeOneContact();
+removeLastContact();
